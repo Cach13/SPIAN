@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Header y Navegación */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111634;
+}
+
+.logo span {
+    color: #E27A0D;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #262626;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-nav a:hover {
+    color: #E27A0D;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #E27A0D;
+    transition: width 0.3s;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: #E27A0D;
+    color: white;
+    border: none;
+    margin-left: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #c46a0c;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #111634;
+    border: 1px solid #111634;
+}
+
+.btn-secondary:hover {
+    background-color: #111634;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #111634, #1a2150);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    color: #111634;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.feature-card {
+    background-color: #111634;
+    border-radius: 8px;
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #E27A0D;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.feature-icon i {
+    color: white;
+    font-size: 24px;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #D1710C;
+}
+
+/* Plans Section */
+.plans {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.plans-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.plan-card {
+    background-color: #111634;
+    border-radius: 8px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.plan-card.popular {
+    border-top: 4px solid #E27A0D;
+    position: relative;
+}
+
+.popular-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #E27A0D;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.plan-price {
+    font-size: 42px;
+    font-weight: 700;
+    color: #E27A0D;
+    margin: 20px 0;
+}
+
+.plan-price span {
+    font-size: 16px;
+    color: #666;
+}
+
+.plan-features {
+    margin: 30px 0;
+    text-align: left;
+}
+
+.plan-features li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.plan-features li::before {
+    content: '✓';
+    color: #E27A0D;
+    position: absolute;
+    left: 0;
+}
+
+
+/* Footer */
+footer {
+    background-color: #111634;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #E27A0D;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav li {
+        margin: 0;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .buttons {
+        margin-top: 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .plan-card {
+        padding: 30px 20px;
+    }
+}
