@@ -81,7 +81,7 @@ ul {
 /* Header y Navegación */
 header {
     background-color: #fff;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -97,33 +97,35 @@ header {
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
-    color: var(--primary-color);
-    letter-spacing: -0.5px;
+    color: #111634;
 }
 
 .logo span {
-    color: var(--accent-color);
+    color: #E27A0D;
 }
 
 .main-nav ul {
     display: flex;
+    list-style: none;
 }
 
 .main-nav li {
-    margin-left: 28px;
+    margin-left: 25px;
 }
 
 .main-nav a {
-    color: var(--text-color);
+    text-decoration: none;
+    color: #262626;
     font-weight: 500;
+    transition: color 0.3s;
     padding: 5px 0;
     position: relative;
 }
 
 .main-nav a:hover {
-    color: var(--accent-color);
+    color: #E27A0D;
 }
 
 .main-nav a::after {
@@ -133,7 +135,7 @@ header {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--accent-color);
+    background-color: #E27A0D;
     transition: width 0.3s;
 }
 
@@ -144,6 +146,36 @@ header {
 .buttons {
     display: flex;
     align-items: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: #E27A0D;
+    color: white;
+    border: none;
+    margin-left: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #c46a0c;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #111634;
+    border: 1px solid #111634;
+}
+
+.btn-secondary:hover {
+    background-color: #111634;
+    color: white;
 }
 
 /* Hero Section */

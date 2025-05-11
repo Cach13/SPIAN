@@ -18,53 +18,28 @@ body {
     padding: 20px;
 }
 
-/* Header & Navigation */
+/* Header y Navegación */
 header {
-    background: linear-gradient(135deg, #111634 0%, #2a2f5a 100%);
-    color: white;
-    padding: 100px 0 80px;
-    text-align: center;
-    position: relative;
-}
-
-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
-}
-
-header h1 {
-    font-size: 46px;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-header p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.9;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
-    color: white;
+    color: #111634;
 }
 
 .logo span {
@@ -77,16 +52,20 @@ header p {
 }
 
 .main-nav li {
-    margin: 0 15px;
+    margin-left: 25px;
 }
 
 .main-nav a {
-    color: white;
     text-decoration: none;
+    color: #262626;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: color 0.3s;
     padding: 5px 0;
     position: relative;
+}
+
+.main-nav a:hover {
+    color: #E27A0D;
 }
 
 .main-nav a::after {
@@ -94,10 +73,10 @@ header p {
     position: absolute;
     width: 0;
     height: 2px;
-    background: #E27A0D;
     bottom: 0;
     left: 0;
-    transition: width 0.3s ease;
+    background-color: #E27A0D;
+    transition: width 0.3s;
 }
 
 .main-nav a:hover::after {
@@ -106,37 +85,37 @@ header p {
 
 .buttons {
     display: flex;
-    gap: 10px;
+    align-items: center;
 }
 
 .btn {
     padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: 500;
+    border-radius: 4px;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
+    transition: all 0.3s;
 }
 
 .btn-primary {
     background-color: #E27A0D;
     color: white;
+    border: none;
+    margin-left: 10px;
 }
 
 .btn-primary:hover {
-    background-color: #c56b0b;
-    transform: translateY(-2px);
+    background-color: #c46a0c;
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    color: #111634;
+    border: 1px solid #111634;
 }
 
 .btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
+    background-color: #111634;
+    color: white;
 }
 
 /* Product Section */
@@ -315,13 +294,11 @@ footer {
         margin: 0;
         text-align: center;
         padding: 10px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid #eee;
     }
 
     .buttons {
         margin-top: 15px;
-        width: 100%;
-        justify-content: center;
     }
 
     header h1 {
